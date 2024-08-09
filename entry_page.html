@@ -25,15 +25,15 @@
     <nav>
       <div class="container">
         <div class="logo">
-          <a href="index.html"><img src="img/logo-2-nobg.png" alt="" /></a>
+          <a href="index.html"><img id='logo-big' src="img/logo-2-nobg.png" alt="logo" /></a>
         </div>
-        <div class="main-menu">
+        <div class="main-menu" id="main-menu">
           <ul>
             <li class="link">
-              <a href="index.html"><i class="fas fa-house"></i> Головна</a>
+              <a href=""><i class="fas fa-house"></i> Головна</a>
             </li>
             <li class="link">
-              <a href=""><i class="fas fa-book"></i> Каталог книг</a>
+              <a href="book_catalog.html"><i class="fas fa-book"></i> Каталог книг</a>
             </li>
             <li class="link">
               <a href=""><i class="fas fa-bookmark"></i> Статті</a>
@@ -41,12 +41,16 @@
             <li class="link">
               <a href=""><i class="fas fa-user"></i> Вхід</a>
             </li>
+            <li>
+              <label class="darkmode">
+              <input type="checkbox" id="darkmode" />
+              <i id="darkModeIcon" class="fas fa-moon"></i>
+            </label> 
+            </li>   
           </ul>
         </div>
-        <label class="darkmode">
-          <input type="checkbox" id="darkmode" />
-          <i id="darkModeIcon" class="fas fa-moon"></i>
-        </label>
+        <div class="burger-menu" id="burger-menu"><i class="fa-solid fa-bars"></i></div>
+        
       </div>
     </nav>
     <section class="announcements-wraper">
