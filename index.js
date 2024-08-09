@@ -30,37 +30,7 @@ darkbtn.addEventListener("click", () => {
   }
 });
 
-//Вид записів
-const viewBtn = document.getElementById("view-selector");
-const viewIcon = document.getElementById("viewIcon");
 
-let items = document.querySelectorAll(
-  ".events-wraper, .event, .event-image, .event-header, .description, .more"
-);
-
-const currentView = localStorage.getItem("view") === "grid";
-
-if (currentView) {
-  items.forEach((item) => {
-    item.classList.add("wide");
-  });
-  viewBtn.checked = true;
-}
-viewBtn.addEventListener("click", () => {
-  if (viewBtn.checked) {
-    items.forEach((item) => {
-      item.classList.add("wide");
-    });
-    viewIcon.classList.replace("fa-list", "fa-table-cells-large");
-    localStorage.setItem("view", "grid");
-  } else {
-    items.forEach((item) => {
-      item.classList.remove("wide");
-    });
-    viewIcon.classList.replace("fa-table-cells-large", "fa-list");
-    localStorage.setItem("view", "list");
-  }
-});
 
 //Бургер-меню
 const burgerMenuBtn =  document.getElementById("burger-menu")
@@ -71,13 +41,8 @@ burgerMenuBtn.addEventListener('click', () =>{
 })
 
 //Modal
-// Get the modal
 var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
 var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
@@ -212,4 +177,36 @@ prenexIcons.forEach(icon => {
         // update the calendar display
         manipulate();
     });
+});
+
+//Вид записів
+const viewBtn = document.getElementById("view-selector");
+const viewIcon = document.getElementById("viewIcon");
+
+let items = document.querySelectorAll(
+  ".events-wraper, .event, .event-image, .event-header, .description, .more"
+);
+
+const currentView = localStorage.getItem("view") === "grid";
+
+if (currentView) {
+  items.forEach((item) => {
+    item.classList.add("wide");
+  });
+  viewBtn.checked = true;
+}
+viewBtn.addEventListener("click", () => {
+  if (viewBtn.checked) {
+    items.forEach((item) => {
+      item.classList.add("wide");
+    });
+    viewIcon.classList.replace("fa-list", "fa-table-cells-large");
+    localStorage.setItem("view", "grid");
+  } else {
+    items.forEach((item) => {
+      item.classList.remove("wide");
+    });
+    viewIcon.classList.replace("fa-table-cells-large", "fa-list");
+    localStorage.setItem("view", "list");
+  }
 });

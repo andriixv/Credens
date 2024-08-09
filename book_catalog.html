@@ -19,21 +19,29 @@
       href="img/favicon/favicon.ico"
       type="image/x-icon"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
   </head>
 
   <body>
     <nav>
       <div class="container">
         <div class="logo">
-          <a href="index.html"><img id='logo-big' src="img/logo-2-nobg.png" alt="logo" /></a>
+          <a href="index.html"
+            ><img id="logo-big" src="img/logo-2-nobg.png" alt="logo"
+          /></a>
         </div>
         <div class="main-menu" id="main-menu">
           <ul>
             <li class="link">
-              <a href=""><i class="fas fa-house"></i> Головна</a>
+              <a href="index.html"><i class="fas fa-house"></i> Головна</a>
             </li>
             <li class="link">
-              <a href="book_catalog.html"><i class="fas fa-book"></i> Каталог книг</a>
+              <a href="book_catalog.html"
+                ><i class="fas fa-book"></i> Каталог книг</a
+              >
             </li>
             <li class="link">
               <a href=""><i class="fas fa-bookmark"></i> Статті</a>
@@ -43,16 +51,46 @@
             </li>
             <li>
               <label class="darkmode">
-              <input type="checkbox" id="darkmode" />
-              <i id="darkModeIcon" class="fas fa-moon"></i>
-            </label> 
-            </li>   
+                <input type="checkbox" id="darkmode" />
+                <i id="darkModeIcon" class="fas fa-moon"></i>
+              </label>
+            </li>
           </ul>
         </div>
-        <div class="burger-menu" id="burger-menu"><i class="fa-solid fa-bars"></i></div>
-        
+        <div class="burger-menu" id="burger-menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </div>
     </nav>
+    <section id="myModal" class="modal-calendar">
+      <div class="calendar-container">
+        <span class="close material-symbols-rounded">close</span>
+        <div class="calendar-header">
+          <p class="calendar-current-date"></p>
+          <div class="calendar-navigation">
+            <span id="calendar-prev" class="material-symbols-rounded">
+              chevron_left
+            </span>
+            <span id="calendar-next" class="material-symbols-rounded">
+              chevron_right
+            </span>
+          </div>
+        </div>
+
+        <div class="calendar-body">
+          <ul class="calendar-weekdays">
+            <li>Sun</li>
+            <li>Mon</li>
+            <li>Tue</li>
+            <li>Wed</li>
+            <li>Thu</li>
+            <li>Fri</li>
+            <li>Sat</li>
+          </ul>
+          <ul class="calendar-dates"></ul>
+        </div>
+      </div>
+    </section>
     <section class="announcements-wraper">
       <div class="announcements">
         <p>01.09 відбудеться 1 подія</p>
@@ -60,15 +98,19 @@
         <p>11.09 відбудеться 3 подія</p>
         <p>21.09 відбудеться 4 подія</p>
       </div>
+
+      <button id="myBtn" class="material-symbols-rounded btn">
+        Календар calendar_month
+      </button>
     </section>
+ 
     <section class="book-catalog">
-        <div class="container">
-            <div class="section-header">
-                <h1><i class="fas fa-folder-open"></i> Каталог книг</h1>
-              </div>
-              <p>Тут будуть опитування</p>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <h1><i class="fas fa-folder-open"></i> Каталог книг</h1>
         </div>
+        <p>Тут будуть опитування</p>
+      </div>
     </section>
 
     <footer>
