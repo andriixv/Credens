@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Select Filter with Selected Categories</title>
+    <style>
+      /* styles.css */
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .filter-container {
+        margin: 20px;
+      }
+
+      .filters label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .selected-categories-container {
+        margin: 20px;
+      }
+
+      .selected-categories {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .selected-category {
+        background-color: #007bff;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin: 5px;
+        cursor: pointer;
+      }
+
+      .items-container {
+        margin: 20px;
+      }
+
+      .item {
+        padding: 10px;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="filter-container">
+      <h2>Filter Items</h2>
+      <div class="filters">
+        <label
+          ><input type="checkbox" class="filter-checkbox" value="category1" />
+          Category 1</label
+        >
+        <label
+          ><input type="checkbox" class="filter-checkbox" value="category2" />
+          Category 2</label
+        >
+        <label
+          ><input type="checkbox" class="filter-checkbox" value="category3" />
+          Category 3</label
+        >
+      </div>
+    </div>
+
+    <div class="selected-categories-container">
+      <h2>Selected Categories</h2>
+      <div class="selected-categories"></div>
+    </div>
+
+    <!-- <div class="items-container">
+      <div class="item" data-category="category1">Item 1 - Category 1</div>
+      <div class="item" data-category="category2">Item 2 - Category 2</div>
+      <div class="item" data-category="category1 category2">
+        Item 3 - Category 1 & 2
+      </div>
+      <div class="item" data-category="category3">Item 4 - Category 3</div>
+    </div> -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const checkboxes = document.querySelectorAll(".filter-checkbox");
+        const selectedCategoriesContainer = document.querySelector(
+          ".selected-categories"
+        );
+        //const itemsContainer = document.querySelector(".items-container");
+        //const items = Array.from(itemsContainer.querySelectorAll(".item"));
+
+        checkboxes.forEach((checkbox) => {
+          checkbox.addEventListener("change", filterAndSortItems);
+        });
+
+        function filterAndSortItems() {
+          const selectedValues = Array.from(checkboxes)
+            .filter((checkbox) => checkbox.checked)
+            .map((checkbox) => checkbox.value);
+
+          updateSelectedCategories(selectedValues);
+
+          //Фільтрувати елементи
+          //const filteredItems = items.filter((item) => {
+          //  const itemCategories = item
+          //    .getAttribute("data-category")
+          //    .split(" ");
+          //  return (
+          //    selectedValues.length === 0 ||
+          //    selectedValues.some((value) => itemCategories.includes(value))
+          //  );
+          //});
+
+          //const sortedItems = filteredItems.sort((a, b) => {
+          //  const aCategories = a.getAttribute("data-category").split(" ");
+          //  const bCategories = b.getAttribute("data-category").split(" ");
+
+          //  const aMatch = selectedValues.some((value) =>
+          //    aCategories.includes(value)
+          //  );
+          //  const bMatch = selectedValues.some((value) =>
+          //    bCategories.includes(value)
+          //  );
+
+          //  if (aMatch && !bMatch) return -1;
+          //  if (!aMatch && bMatch) return 1;
+          //  return 0;
+          //});
+
+          //itemsContainer.innerHTML = "";
+          //sortedItems.forEach((item) => {
+          //  itemsContainer.appendChild(item);
+          //});
+        }
+
+        function updateSelectedCategories(selectedValues) {
+          selectedCategoriesContainer.innerHTML = "";
+
+          selectedValues.forEach((value) => {
+            const categoryElement = document.createElement("div");
+            categoryElement.classList.add("selected-category");
+            categoryElement.textContent = value.replace(
+              /^./,
+              value[0].toUpperCase()
+            );
+            categoryElement.addEventListener("click", () => {
+              document.querySelector(`input[value="${value}"]`).checked = false;
+              filterAndSortItems();
+            });
+            selectedCategoriesContainer.appendChild(categoryElement);
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
