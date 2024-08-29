@@ -535,12 +535,16 @@ footer .contacts a:hover {
 }
 
 /*Cтиль фільтра*/
+.add-filters{
+  display: flex;
+}
 .filter-container {
   background-color: var(--whitesmoke);
   visibility: collapse;
   height: 0;
   font-size: .2rem;
   transition: 0.1s;
+  padding: 0;
 }
 
 .filter-button{
@@ -557,6 +561,7 @@ footer .contacts a:hover {
   height: 100%;
   font-size: 1.2rem;
   transition: 0.5s;
+  padding: 20px 15px;
 }
 
 .filter-container.dark{
