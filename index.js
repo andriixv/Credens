@@ -241,3 +241,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+//Відображення прев'ю зображення при додаванні книги
+function showBook(){
+  const [file] = bookImg.files
+  if (file) {
+
+    document.getElementById('bookImage').style.display = 'block';
+    document.getElementById('bookImage').src = URL.createObjectURL(file)
+    
+    document.getElementById('add-cover').style.display = 'none';
+    document.getElementById('edit-cover').style.display = 'block';
+  }
+}

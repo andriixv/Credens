@@ -1,156 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Креденс</title>
-    <link rel="stylesheet" href="style.css" />
 
-    <!--Font awesome-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="shortcut icon"
-      href="img/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Креденс</title>
+  <link rel="stylesheet" href="style.css" />
 
-  <body>
-    <nav>
-      <div class="container">
-        <div class="logo">
-          <a href="index.html"
-            ><img id="logo-big" src="img/logo-2-nobg.png" alt="logo"
-          /></a>
+  <!--Font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+  <nav>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><img id="logo-big" src="img/logo-2-nobg.png" alt="logo" /></a>
+      </div>
+      <div class="main-menu" id="main-menu">
+        <ul>
+          <li class="link">
+            <a href="index.html"><i class="fas fa-house"></i> Головна</a>
+          </li>
+          <li class="link">
+            <a href="book_catalog.html"><i class="fas fa-book"></i> Каталог книг</a>
+          </li>
+          <li class="link">
+            <a href="entries_page.html"><i class="fas fa-bookmark"></i> Статті</a>
+          </li>
+          <li class="link">
+            <a href=""><i class="fas fa-user"></i> Вхід</a>
+          </li>
+          <li>
+            <label class="darkmode">
+              <input type="checkbox" id="darkmode" />
+              <i id="darkModeIcon" class="fas fa-moon"></i>
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="burger-menu" id="burger-menu">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <section class="filter-wrapper">
+    <div class="add-filters container">
+      <span onclick="showFilters()" class="material-symbols-rounded filter-button"> filter_alt </span>
+      <div class="selected-categories-container">
+        <!-- <h2>Selected Categories</h2> -->
+        <div class="selected-categories"></div>
+      </div>
+      <a href="/add_book.html" class="filter-button"><span class="material-symbols-rounded">add </span>Книга</a>
+    </div>
+
+    <div class="container filter-container">
+      <form class="filters">
+        <h5>Жанр книги</h5>
+        <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="Фантастика" />
+          Фантастика</label><br />
+
+        <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="Поезія" />
+          Поезія</label><br />
+
+        <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="Проза" />
+          Проза</label><br />
+
+        <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="Детектив" />
+          Детектив</label><br />
+
+        <h5><br>Автор</h5>
+        <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="Тарас Шевченко" />
+          Тарас Шевченко</label><br />
+
+        <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="Іван Франко" />
+          Іван Франко</label><br />
+
+        <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="Леся Українка" />
+          Леся Українка</label><br />
+
+        <h5><br>Серія</h5>
+        <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="Класика" />
+          Класика Української літератури</label><br />
+
+        <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="Майстри детективу" />
+          Майстри детективу</label><br />
+
+        <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="Поезія для душі" />
+          Поезія для душі</label><br />
+
+        <h5><br>Рік видання</h5>
+        <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="1992" />
+          1992</label>
+
+        <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="2001" />
+          2001</label>
+
+        <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="2012" />
+          2012</label>
+
+        <h5><br>Мова</h5>
+        <label><input type="checkbox" class="filter-checkbox" name="language" value="Українська" />
+          Українська</label>
+
+        <label><input type="checkbox" class="filter-checkbox" name="language" value="Англійська" />
+          Англійська</label>
+
+        <label><input type="checkbox" class="filter-checkbox" name="language" value="Німецька" />
+          Німецька</label>
+
+        <h5><br>Палітурка</h5>
+        <label><input type="checkbox" class="filter-checkbox" name="paperback" value="Тверда" />
+          Тверда</label><br />
+
+        <label><input type="checkbox" class="filter-checkbox" name="paperback" value="М'яка" />
+          М'яка</label><br />
+
+        <label><input type="checkbox" class="filter-checkbox" name="paperback" value="Суперобкладинка" />
+          Суперобкладинка</label><br />
+      </form>
+    </div>
+  </section>
+
+  <section class="book-catalog">
+    <div class="container">
+      <div class="book card">
+        <img class="cover" src='/img/gibson_nejromant.webp'></img>
+        <div class="book-info">
+          <div class="title"><h1>Нейромант</h1></div>
+          <div class="author">Вільям Гібсон</div>
+          <div class="year">2022</div>
+          <div class="genre">Наукова фантастика</div>
+          <div class="language">Українська</div>
+          <div class="publisher">Видавництво "Видавництво"</div>
+          <div class="isbn">978-617-664-240-4</div>
+          <a class="btn more" href="">Детальніше</a>
         </div>
-        <div class="main-menu" id="main-menu">
+
+      </div>
+      <div class="book card">
+        <img class="cover" src='/img/silmarilion.webp'></img>
+        <div class="book-info">
+          <div class="title"><h1>Сильмариліон</h1></div>
+          <div class="author">Джон Рональд Руел Толкін</div>
+          <div class="year">2021</div>
+          <div class="genre">Фентезі</div>
+          <div class="language">Українська</div>
+          <div class="publisher">Астролябія</div>
+          <div class="isbn">978-617-664-240-4</div>
+          <a class="btn more" href="">Детальніше</a>
+        </div>
+      </div>
+      <div class="book card"></div>
+      <div class="book card"></div>
+      <div class="book card"></div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="footer-flex">
+        <div class="contacts">
+          <h2>Контакти</h2>
           <ul>
-            <li class="link">
-              <a href="index.html"><i class="fas fa-house"></i> Головна</a>
-            </li>
-            <li class="link">
-              <a href="book_catalog.html"
-                ><i class="fas fa-book"></i> Каталог книг</a
-              >
-            </li>
-            <li class="link">
-              <a href="entries_page.html"><i class="fas fa-bookmark"></i> Статті</a>
-            </li>
-            <li class="link">
-              <a href=""><i class="fas fa-user"></i> Вхід</a>
+            <li>
+              <a href="mailto:"><i class="fas fa-envelope"></i> email@email.com</a>
             </li>
             <li>
-              <label class="darkmode">
-                <input type="checkbox" id="darkmode" />
-                <i id="darkModeIcon" class="fas fa-moon"></i>
-              </label>
+              <a href="tel:+380123456789"><i class="fas fa-phone"></i> +380123456789</a>
             </li>
           </ul>
         </div>
-        <div class="burger-menu" id="burger-menu">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-      </div>
-    </nav>
-    <section id="myModal" class="modal-calendar">
-      <div class="calendar-container">
-        <span class="close material-symbols-rounded">close</span>
-        <div class="calendar-header">
-          <p class="calendar-current-date"></p>
-          <div class="calendar-navigation">
-            <span id="calendar-prev" class="material-symbols-rounded">
-              chevron_left
-            </span>
-            <span id="calendar-next" class="material-symbols-rounded">
-              chevron_right
-            </span>
-          </div>
-        </div>
-
-        <div class="calendar-body">
-          <ul class="calendar-weekdays">
-            <li>Sun</li>
-            <li>Mon</li>
-            <li>Tue</li>
-            <li>Wed</li>
-            <li>Thu</li>
-            <li>Fri</li>
-            <li>Sat</li>
+        <div class="socials">
+          <h2>Соціальні мережі</h2>
+          <ul>
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-viber"></i></a>
+            </li>
           </ul>
-          <ul class="calendar-dates"></ul>
         </div>
       </div>
-    </section>
-    <section class="announcements-wraper">
-      <div class="announcements">
-        <p>01.09 відбудеться 1 подія</p>
-        <p>10.09 відбудеться 2 подія</p>
-        <p>11.09 відбудеться 3 подія</p>
-        <p>21.09 відбудеться 4 подія</p>
-      </div>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+</body>
 
-      <button id="myBtn" class="material-symbols-rounded btn">
-        Календар calendar_month
-      </button>
-    </section>
- 
-    <section class="book-catalog">
-      <div class="container">
-        <div class="section-header">
-          <h1><i class="fas fa-folder-open"></i> Каталог книг</h1>
-        </div>
-        <p>Тут будуть опитування</p>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <div class="footer-flex">
-          <div class="contacts">
-            <h2>Контакти</h2>
-            <ul>
-              <li>
-                <a href="mailto:"
-                  ><i class="fas fa-envelope"></i> email@email.com</a
-                >
-              </li>
-              <li>
-                <a href="tel:+380123456789"
-                  ><i class="fas fa-phone"></i> +380123456789</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="socials">
-            <h2>Соціальні мережі</h2>
-            <ul>
-              <li>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-brands fa-telegram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-brands fa-viber"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <script src="index.js"></script>
-  </body>
 </html>

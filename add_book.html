@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Креденс</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!--Font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+  <nav>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><img id="logo-big" src="img/logo-2-nobg.png" alt="logo" /></a>
+      </div>
+      <div class="main-menu" id="main-menu">
+        <ul>
+          <li class="link">
+            <a href=""><i class="fas fa-house"></i> Головна</a>
+          </li>
+          <li class="link">
+            <a href="book_catalog.html"><i class="fas fa-book"></i> Каталог книг</a>
+          </li>
+          <li class="link">
+            <a href="entries_page.html"><i class="fas fa-bookmark"></i> Статті</a>
+          </li>
+          <li class="link">
+            <a href=""><i class="fas fa-user"></i> Вхід</a>
+          </li>
+          <li>
+            <label class="darkmode">
+              <input type="checkbox" id="darkmode" />
+              <i id="darkModeIcon" class="fas fa-moon"></i>
+            </label>
+          </li>
+          
+        </ul>
+      
+      </div>
+      <div class="burger-menu" id="burger-menu">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <section class="past-events">
+    <div class="container">
+      <div class="section-header">
+        <h1><i class="fas fa-book"></i> Додавання нової книги в каталог</h1>
+      </div>
+    </div>
+    <div class="container">
+      <form class="book-form" action="">
+        <div class="first-div">
+          <label><input type="text" placeholder="Назва книги" autofocus /></label>
+
+          <!--Для вибору жанру можна зробити селектор або галочки-->
+          <label><input type="text" placeholder="Жанр" required /></label>
+          <label><input type="text" placeholder="Автор" required /></label>
+          <label>
+            <select name="Lang" id="Lang" required>
+              <option value="All" selected disabled hidden>
+                Оберіть мову книги
+              </option>
+              <option value="Ukr">Українська</option>
+              <option value="Eng">Англійська</option>
+              <option value="Pol">Польська</option>
+            </select>
+          </label>
+          <label><input type="number" placeholder="Рік видання" required /></label>
+          <label><input type="text" placeholder="Видавець" required /></label>
+          <label><input type="text" placeholder="Серія" required /></label>
+          <label><input type="text" placeholder="Палітурка" required /></label>
+          <label><input type="number" placeholder="Кількість книг в бібліотеці" required /></label>
+          <label><input type="number" placeholder="Наклад" required /></label>
+          <label><input type="text" placeholder="Розмір книги" required /></label>
+          <label><input type="text" placeholder="номер ISBN" /></label>
+          <label>
+            <textarea id="opus" rows="4" cols="50" placeholder="Короткий опис книги" required></textarea>
+          </label>
+          <label><input type="text" placeholder="Анотація" required /></label>
+          <input class="btn" type="submit" value="Надіслати" />
+        </div>
+        <div class="second-div">
+          <label class="uploadBtn">
+            <span class="material-symbols-rounded" id="add-cover">add_a_photo Обкладинка</span>
+            <span class="material-symbols-rounded" id="edit-cover">edit Редагувати</span>
+            <img id="bookImage" src="#" alt="book image"/>
+            <input type="file" id="bookImg" name="img" accept="image/*" onchange="showBook()" />
+          </label>
+        </div>
+
+      </form>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="footer-flex">
+        <div class="contacts">
+          <h2>Контакти</h2>
+          <ul>
+            <li>
+              <a href="mailto:"><i class="fas fa-envelope"></i> email@email.com</a>
+            </li>
+            <li>
+              <a href="tel:+380123456789"><i class="fas fa-phone"></i> +380123456789</a>
+            </li>
+          </ul>
+        </div>
+        <div class="socials">
+          <h2>Соціальні мережі</h2>
+          <ul>
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-viber"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+</body>
+
+</html>
