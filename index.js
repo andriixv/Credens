@@ -38,27 +38,25 @@ burgerMenuBtn.addEventListener("click", () => {
   mainMenu.classList.toggle("open");
 });
 
-//Modal
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("myBtn");
-var span = document.getElementsByClassName("close")[0];
+//Модальне вікно
+function modal() {
+  var modal = document.getElementById("myModal");
+  var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal
-btn.onclick = function () {
   modal.style.display = "block";
-};
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-};
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
     modal.style.display = "none";
-  }
-};
+  };
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+}
 
 //Календар
 let date = new Date();
@@ -203,7 +201,7 @@ function changeView() {
 
 //Показати/сховати фільтр
 
-function showFilters(){
+function showFilters() {
   const filterContainer = document.getElementsByClassName('filter-container')[0]
   console.log('click')
   filterContainer.classList.toggle("open");
@@ -219,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
   checkboxes.forEach((checkbox) => {
     console.log('click3');
     checkbox.addEventListener("change", filterAndSortItems);
-    
+
   });
 
   function filterAndSortItems() {
@@ -247,13 +245,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //Відображення прев'ю зображення при додаванні книги
-function showBook(){
+function showBook() {
   const [file] = bookImg.files
   if (file) {
 
     document.getElementById('bookImage').style.display = 'block';
     document.getElementById('bookImage').src = URL.createObjectURL(file)
-    
+
     document.getElementById('add-cover').style.display = 'none';
     document.getElementById('edit-cover').style.display = 'block';
   }
