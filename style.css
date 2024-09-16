@@ -310,6 +310,10 @@ footer .socials i:hover {
   color: #7360f2;
 }
 
+.fa-github:hover {
+  color: #4078c0;
+}
+
 footer .contacts a {
   padding: 0 10px;
   color: var(--eggshell);
