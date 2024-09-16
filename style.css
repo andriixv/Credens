@@ -651,6 +651,9 @@ footer .contacts a:hover {
   border-radius: 5px;
   margin: 5px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .selected-category::after {
@@ -751,12 +754,25 @@ textarea {
   display: flex;
   flex-direction: row;
   max-width: 75%;
+  gap: 30px;
 }
 .book img{
   max-width: 400px;
+  object-fit: cover;
 }
 .book-info{
   max-width: 40%;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 1090px) {
+  .book{
+    max-width: 95%;
+  }
+  .book-info{
+    font-size: .7rem;
+    overflow: hidden;
+  }
+  
 }
