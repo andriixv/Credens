@@ -49,7 +49,47 @@
       </div>
     </div>
   </nav>
+  <section id="myModal" class="modal-calendar">
+    <div class="calendar-container">
+      <span class="close material-symbols-rounded">close</span>
+      <div class="calendar-header">
+        <p class="calendar-current-date"></p>
+        <div class="calendar-navigation">
+          <span id="calendar-prev" class="material-symbols-rounded">
+            chevron_left
+          </span>
+          <span id="calendar-next" class="material-symbols-rounded">
+            chevron_right
+          </span>
+        </div>
+      </div>
 
+      <div class="calendar-body">
+        <ul class="calendar-weekdays">
+          <li>Sun</li>
+          <li>Mon</li>
+          <li>Tue</li>
+          <li>Wed</li>
+          <li>Thu</li>
+          <li>Fri</li>
+          <li>Sat</li>
+        </ul>
+        <ul class="calendar-dates"></ul>
+      </div>
+    </div>
+  </section>
+  <section class="announcements-wraper">
+    <div class="announcements">
+      <p>01.09 відбудеться 1 подія</p>
+      <p>10.09 відбудеться 2 подія</p>
+      <p>11.09 відбудеться 3 подія</p>
+      <p>21.09 відбудеться 4 подія</p>
+    </div>
+
+    <button id="myBtn" class="material-symbols-rounded btn">
+      Календар calendar_month
+    </button>
+  </section>
   <section class="filter-wrapper">
     <div class="add-filters container">
       <span onclick="showFilters()" class="material-symbols-rounded filter-button"> filter_alt </span>
@@ -64,66 +104,66 @@
       <form class="filters">
         <h5>Жанр книги</h5>
         <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="Фантастика" />
-          Фантастика</label><br />
+        Фантастика</label><br />
 
         <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="Поезія" />
-          Поезія</label><br />
+        Поезія</label><br />
 
         <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="Проза" />
-          Проза</label><br />
+        Проза</label><br />
 
         <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="Детектив" />
-          Детектив</label><br />
+        Детектив</label><br />
 
         <h5><br>Автор</h5>
-        <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="Тарас Шевченко" />
-          Тарас Шевченко</label><br />
+        <label><input type="checkbox" class="filter-checkbox" value="Тарас Шевченко" />
+        Тарас Шевченко</label><br />
 
-        <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="Іван Франко" />
-          Іван Франко</label><br />
+        <label><input type="checkbox" class="filter-checkbox" value="Іван Франко" />
+        Іван Франко</label><br />
 
-        <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="Леся Українка" />
-          Леся Українка</label><br />
+        <label><input type="checkbox" class="filter-checkbox" value="Леся Українка" />
+        Леся Українка</label><br />
 
         <h5><br>Серія</h5>
-        <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="Класика" />
-          Класика Української літератури</label><br />
+        <label><input type="checkbox" class="filter-checkbox" value="Класика" />
+        Класика Української літератури</label><br />
 
-        <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="Майстри детективу" />
-          Майстри детективу</label><br />
+        <label><input type="checkbox" class="filter-checkbox" value="Майстри детективу" />
+        Майстри детективу</label><br />
 
-        <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="Поезія для душі" />
-          Поезія для душі</label><br />
+        <label><input type="checkbox" class="filter-checkbox" ="Поезія для душі" />
+        Поезія для душі</label><br />
 
         <h5><br>Рік видання</h5>
-        <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="1992" />
-          1992</label>
+        <label><input type="checkbox" class="filter-checkbox" name="year" value="1992" />
+        1992</label>
 
-        <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="2001" />
-          2001</label>
+        <label><input type="checkbox" class="filter-checkbox" name="year" value="2001" />
+        2001</label>
 
-        <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="2012" />
-          2012</label>
+        <label><input type="checkbox" class="filter-checkbox" name="year" value="2012" />
+        2012</label>
 
         <h5><br>Мова</h5>
         <label><input type="checkbox" class="filter-checkbox" name="language" value="Українська" />
-          Українська</label>
+        Українська</label>
 
         <label><input type="checkbox" class="filter-checkbox" name="language" value="Англійська" />
-          Англійська</label>
+        Англійська</label>
 
         <label><input type="checkbox" class="filter-checkbox" name="language" value="Німецька" />
-          Німецька</label>
+        Німецька</label>
 
         <h5><br>Палітурка</h5>
         <label><input type="checkbox" class="filter-checkbox" name="paperback" value="Тверда" />
-          Тверда</label><br />
+        Тверда</label><br />
 
         <label><input type="checkbox" class="filter-checkbox" name="paperback" value="М'яка" />
-          М'яка</label><br />
+        М'яка</label><br />
 
         <label><input type="checkbox" class="filter-checkbox" name="paperback" value="Суперобкладинка" />
-          Суперобкладинка</label><br />
+        Суперобкладинка</label><br />
       </form>
     </div>
   </section>

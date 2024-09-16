@@ -211,12 +211,15 @@ function showFilters(){
 //Вибрані фільтри книг і матеріалів з'являються вгорі
 document.addEventListener("DOMContentLoaded", () => {
   const checkboxes = document.querySelectorAll(".filter-checkbox");
+  console.log('click2')
   const selectedCategoriesContainer = document.querySelector(
     ".selected-categories"
   );
 
   checkboxes.forEach((checkbox) => {
+    console.log('click3');
     checkbox.addEventListener("change", filterAndSortItems);
+    
   });
 
   function filterAndSortItems() {
