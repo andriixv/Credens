@@ -684,6 +684,7 @@ textarea {
   border: none;
   border-radius: 5px;
   padding: 10px;
+  font-size: 1.3rem;
 }
 
 .book-form input[name="img"] {
