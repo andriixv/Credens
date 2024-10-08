@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=cancel" />
     <style>
       *{
          box-sizing: border-box;
@@ -16,13 +17,17 @@
          height: 90vh; */
       }
       .map{
-         width: 90vw;
-         height: 90vw;
+         width: 70vw;
+         
       }
       path{
          transition: all .7s;
          fill: rgb(3, 71, 150);
          /* transform-origin: 1px 2px; */
+      }
+      path.selected{
+         transform: scale(1.7);
+         fill: yellow;
       }
       path:hover{
       fill: yellow;
@@ -32,11 +37,14 @@
       }
       .modal{
       position: absolute;
-      z-index: 10;
-      display: none;
+      /* z-index: 10; */
       background-color: rgba(240, 201, 8, 0.492);
+      display: none;
       width: 50%;
       height: 50%;
+      /* display: block;
+      width: 100%;
+      height: 100%; */
       transition: .7s;
       }
       .modal.open{
@@ -44,17 +52,27 @@
       width: 100%;
       height: 100%;
       transition: .7s;
+      z-index: 12;
       }
       .content{
       opacity: 1;
       color: #07a0c3ff;
       height: 100%;
-      
+      padding: 20px;
       }
       .gromady{
-      height: 100%;
+      height: 75%;
       display: grid;
-      grid-template-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto;
+      padding: 50px;
+      }
+      .gromady a{
+         padding: 5px;
+         text-decoration: none;
+         text-align: center;
+      }
+      .gromady a:hover{
+         background-color: blue;
       }
       .modal-header{
       display: flex;
@@ -71,7 +89,9 @@
       <div class="content">
          <div class="modal-header">
             <h1>Волинська область</h1>
-            <span onclick="showModal()">close</span>
+            <span class="material-symbols-rounded"
+               onclick="modalInfo(closeModalInfo())"> cancel
+            </span>
          </div>
          <div class="gromady">
             <a href=''>Іваничівська громада</a>
@@ -132,13 +152,16 @@
       </div>
    </div>
    <div class="map">
+      <!-- 
+      width="612.47321"
+      height="408.0199" -->
       <svg
       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
       xmlns:svg="http://www.w3.org/2000/svg"
       xmlns="http://www.w3.org/2000/svg"
-      width="612.47321"
-      height="408.0199"
-      viewbox="0 0 614 410">   
+      
+      viewbox="0 0 614 410"
+      preserveAspectRatio = 'xMidYMid slice'>  
    
    <path
       d="m 386.51191,387.77242 0.86,-0.12 0.87,0.54 2.18,0.08 0.53,0.47 0.33,1.49 -0.67,0.34 -0.97,-0.14 -0.43,0.48 0.1,0.75 0.86,0.81 2.42,-0.95 1.69,1.01 0.24,1.1 -0.14,0.39 -1.16,0.69 -0.05,1.75 0.29,0.54 2.85,1.42 0.39,2.3 2.56,4.19 -0.48,0.88 -0.73,0 -0.34,0.33 -0.04,0.82 0,0 -1.35,-0.02 -2,0.76 -1.48,0.08 -1.06,-1.64 -1.34,0.13 -0.55,-0.34 -0.5,-2.08 -0.65,-0.82 -0.44,-0.21 -1.61,0.2 -1.69,-0.72 -0.6,0.29 -1.09,-1.54 -1.86,-1.38 -0.74,-1.07 0.74,-0.38 0.01,0.87 0.25,-0.21 0.03,0.38 0.25,-1.11 0.55,1 -0.34,-1.2 0.38,-0.32 2.63,-0.62 2.67,0.16 -0.98,-0.59 -1.7,-0.29 0.76,-0.53 0.46,-1.45 -0.39,-5.71 z"
@@ -280,43 +303,60 @@
       </svg>
    </div>
 <script>
-let clicked = {}
-for (let path of document.getElementsByTagName('path')){
-   clicked[path.id] = 0
-}
-// console.log(clicked)
-
-   let modalStatus = 0
-   function showModal(){
-      if (modalStatus === 0){
-         // document.getElementsByClassName('modal')[0].style.display = 'block';
-         document.getElementsByClassName('modal')[0].classList.add('open')
-         modalStatus = 1
-      }
-      else if (modalStatus === 1){
-         // document.getElementsByClassName('modal')[0].style.display = 'none';
-         document.getElementsByClassName('modal')[0].classList.remove('open')
-         modalStatus = 0
-
-      }
+   let clicked = {}
+   for (let path of document.getElementsByTagName('path')){
+      clicked[path.id] = 0
    }
 
+   let modalStatus = 0
+   function modalInfo(oblastId){
+      // console.log('oblid3: ' + oblastId)
+      if (modalStatus === 0 && oblastId){
+         // console.log('oblid4: ' + oblastId)
+         document.getElementsByClassName('modal')[0].classList.add('open')
+         modalStatus = 1 
+      }
+      else if (modalStatus === 1 && oblastId){
+         // console.log('oblid5: ' + oblastId)
+         document.getElementsByClassName('modal')[0].classList.remove('open')
+         modalStatus = 0
+         // console.log(oblastId)
+         
+         document.getElementById(oblastId).classList.remove('selected')
+         // console.log('done')
+      }
+   }
+ 
    function myFunc(oblastId){
       if (clicked[oblastId] === 0){
          clicked[oblastId] = 1
-         document.getElementById(oblastId).style.transform = 'scale(1.7)'
-         document.getElementById(oblastId).style.fill = 'yellow'
-         console.log('clicked')
-         showModal()
+         document.getElementById(oblastId).classList.add('selected')
+
+         // document.getElementById(oblastId).style.transform = 'scale(1.7)'
+         // document.getElementById(oblastId).style.fill = 'yellow'
+         // console.log('clicked')
+         // console.log('oblid1: ' + oblastId)
+         modalInfo(oblastId)
 
       }
       else if (clicked[oblastId] === 1){
          clicked[oblastId] = 0
-         document.getElementById(oblastId).style.transform = 'scale(1)'
-         document.getElementById(oblastId).style.fill = 'rgb(3, 71, 150)'
-         console.log('unclicked')
-         showModal()
+         document.getElementById(oblastId).classList.remove('selected')
+         
+         // document.getElementById(oblastId).style.transform = 'scale(1)'
+         // document.getElementById(oblastId).style.fill = 'rgb(3, 71, 150)'
+         // console.log('unclicked')
+         // console.log('oblid2: ' + oblastId)
+         modalInfo(oblastId)
       }
+   }
+
+   function closeModalInfo(){
+      
+      // console.log(clicked)
+      // console.log(Object.keys(clicked).find(key => clicked[key] === 1))
+      return(Object.keys(clicked).find(key => clicked[key] === 1))
+
    }
 </script>
 </body>
