@@ -215,19 +215,19 @@ function changeView() {
 
 function showFilters() {
   const filterContainer = document.getElementsByClassName('filter-container')[0]
-  console.log('click')
+  // console.log('click')
   filterContainer.classList.toggle("open");
 }
 //Вибрані фільтри книг і матеріалів з'являються вгорі
 document.addEventListener("DOMContentLoaded", () => {
   const checkboxes = document.querySelectorAll(".filter-checkbox");
-  console.log('click2')
+  // console.log('click2')
   const selectedCategoriesContainer = document.querySelector(
     ".selected-categories"
   );
 
   checkboxes.forEach((checkbox) => {
-    console.log('click3');
+    // console.log('click3');
     checkbox.addEventListener("change", filterAndSortItems);
 
   });

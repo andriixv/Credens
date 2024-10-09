@@ -587,7 +587,7 @@ nav .close-menu{
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 2;
   /* Sit on top */
   padding-top: 100px;
   /* Location of the box */
@@ -630,14 +630,17 @@ nav .close-menu{
 .filter-button {
   cursor: pointer;
   padding: 5px;
-  
   display: flex;
   justify-items: center;
+  background-color: var(--jonquil);
+  border-radius: 15px;
+  margin-right: 10px;
 }
+
 
 .filter-button:hover {
   background: var(--whitesmoke);
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .filter-container.open {
@@ -765,34 +768,59 @@ textarea {
 }
 
 /*Сторінка каталогу книг*/
+
+.book-catalog .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
 .book{
   display: flex;
   flex-direction: row;
   max-width: 75%;
   gap: 30px;
 }
-.book img{
-  max-width: 400px;
-  object-fit: cover;
+.book .cover{
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: contain;
 }
 .book-info{
   max-width: 40%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
-@media (max-width: 1090px) {
+@media (max-width: 760px) {
+  .book-catalog{
+    display: flex;
+  }
   .book{
-    max-width: 95%;
+    max-width: 350px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .book .cover{
+    max-width: 90%;
+    
   }
   .book-info{
-    font-size: .7rem;
+    max-width: 90%;
+    font-size: 1em;
     overflow: hidden;
   }
   
 }
+/* СТОРІНКА ОКРЕМОЇ КНИГИ */
+.book-details{
+  display: flex;
+  flex-direction: row;
+}
 
-/* Сторінка користувача */
+/* СТОРІНКА КОРИСТУВАЧА */
 .container.user_page{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
