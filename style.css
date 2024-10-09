@@ -384,13 +384,13 @@ footer .contacts a:hover {
 }
 
 nav .close-menu{
-  visibility: collapse;
+  display: none;
 }
 /*Вид смартфон*/
 @media (max-width: 1024px) {
   
   nav .close-menu{
-    visibility: visible;
+    display: block;
     position: absolute;
     top: 50px;
     right: 30px;
