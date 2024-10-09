@@ -999,7 +999,7 @@ justify-content: space-between;
 .socials-container{
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  justify-content: space-between;
 }
 .socials-container img{
   width: 25px;
@@ -1015,4 +1015,13 @@ justify-content: space-between;
 .socials-container a:hover{
   background-color: var(--jonquil);
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .form-container{
+    width: 90vw;
+  }
+  .socials-container a{
+    width: 200px;
+  }
 }
