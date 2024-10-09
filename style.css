@@ -863,6 +863,11 @@ textarea {
 .map{
   width: 50vw;
   display: flex;
+}
+@media (max-width: 800px) {
+  .map{
+    width: 95vw;
+  }
   
 }
 path{
