@@ -20,6 +20,7 @@
   --jonquil: #f0c808ff;
   /*used*/
   --whitesmoke: whitesmoke;
+  --paynes-gray: #3FA7D6;
 
   /*Ніч*/
   --body-dark: #292c35;
@@ -28,7 +29,7 @@
   --myrtle-green: #587b7fff;
   --eerie-black: #1e2019ff;
   --prussian-blue: #1d2d44ff;
-  --paynes-gray: #3e5c76ff;
+  
   --silver-lake-blue: #748cabff;
   --rojo: #dd1c1aff;
 }
@@ -379,9 +380,22 @@ footer .contacts a:hover {
   padding: 20px 15px;
 }
 
+nav .close-menu{
+  visibility: collapse;
+}
 /*Вид смартфон*/
 @media (max-width: 1024px) {
-
+  
+  nav .close-menu{
+    visibility: visible;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    font-size: 2rem;
+    color: var(--rich-black);
+    width: 30px;
+    height: 30px;
+  }
   .nav {
     z-index: 2;
     padding: 0;
@@ -429,7 +443,6 @@ footer .contacts a:hover {
     color: var(--rich-black);
     width: 30px;
     height: 30px;
-    z-index: 2;
   }
 
   .past-events .events-wraper {
@@ -594,7 +607,7 @@ footer .contacts a:hover {
 #myBtn {
   border: none;
   border-radius: 0;
-  z-index: 2;
+  z-index: 1;
   cursor: pointer;
   font-size: 1.3rem;
 }
@@ -866,20 +879,19 @@ textarea {
 }
 @media (max-width: 800px) {
   .map{
-    width: 95vw;
+    width: 85vw;
   }
-  
 }
 path{
   transition: all .7s;
-  fill: rgb(3, 71, 150);
+  fill: var(--paynes-gray);
 }
 path.selected{
   transform: scale(1.7);
-  fill: yellow;
+  fill: var(--jonquil);
 }
 path:hover{
-fill: yellow;
+fill: var(--jonquil);
 }
 svg{
 padding: 60px;
@@ -888,7 +900,7 @@ padding: 60px;
 position: absolute;
 top: 0;
 left: 0;
-background-color: rgba(240, 201, 8, 1);
+background-color: var(--jonquil);
 display: none;
 width: 50%;
 height: 50%;
@@ -903,7 +915,7 @@ z-index: 2;
 }
 .content{
 opacity: 1;
-color: #07a0c3ff;
+color: var(--paynes-gray);
 height: 100%;
 padding: 20px;
 }
@@ -927,7 +939,7 @@ padding: 50px;
   text-align: center;
 }
 .gromady a:hover{
-  background-color: blue;
+  background-color: var(--paynes-gray);
 }
 .modal-header{
 display: flex;

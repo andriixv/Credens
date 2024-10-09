@@ -28,11 +28,14 @@
     <nav>
       <div class="container">
         <div class="logo">
-          <a href="index.html"
-            ><img id="logo-big" src="img/logo-2-nobg.png" alt="logo"
+          <a href="index.html">
+            <img id="logo-big" src="img/logo-2-nobg.png" alt="logo"
           /></a>
         </div>
         <div class="main-menu" id="main-menu">
+          <span class='close-menu' id="burger-menu" onclick="burgerMenu()">
+            <i class="fas fa-close"></i>
+          </span>
           <ul>
             <li class="link">
               <a href="index-main.html"><i class="fas fa-house"></i> Головна</a>
@@ -56,7 +59,7 @@
             </li>
           </ul>
         </div>
-        <div class="burger-menu" id="burger-menu">
+        <div class="burger-menu" id="burger-menu" onclick="burgerMenu()">
           <i class="fa-solid fa-bars"></i>
         </div>
       </div>

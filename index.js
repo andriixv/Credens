@@ -30,13 +30,19 @@ darkbtn.addEventListener("click", () => {
   }
 });
 
-//Бургер-меню
-const burgerMenuBtn = document.getElementById("burger-menu");
-const mainMenu = document.getElementById("main-menu");
+//Бургер-меню стара реалізація
+// const burgerMenuBtn = document.getElementById("burger-menu");
+// const mainMenu = document.getElementById("main-menu");
 
-burgerMenuBtn.addEventListener("click", () => {
+// burgerMenuBtn.addEventListener("click", () => {
+//   mainMenu.classList.toggle("open");
+// });
+
+//Бургер-меню
+function burgerMenu(){
+  const mainMenu = document.getElementById("main-menu");
   mainMenu.classList.toggle("open");
-});
+}
 
 //Календар
 function calendar(){
@@ -311,6 +317,7 @@ function showBook() {
       return(opened)
    }
 
+   //Створення фону для модального вікна області
    function oblastBackground(opened){
       let pathD = document.getElementById(opened).getAttribute("d")
       console.log(pathD)
