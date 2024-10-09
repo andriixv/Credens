@@ -110,7 +110,7 @@ nav .burger-menu {
   visibility: collapse;
 }
 
-/*Анонси подій*/
+/*Стрічка анонсів подій*/
 .announcements-wraper {
   background-color: var(--blue-green);
   max-width: 100%;
@@ -122,11 +122,13 @@ nav .burger-menu {
 }
 
 .announcements {
+  width: 100%;
   padding: 5px 0;
   white-space: nowrap;
   display: flex;
+  gap: 20px;
   justify-content: space-evenly;
-  animation: announcements 25s linear infinite;
+  animation: announcements 20s linear infinite;
 }
 
 .announcements p {
