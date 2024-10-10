@@ -341,7 +341,7 @@ footer .contacts a:hover {
 
 .entry-header {
   font-size: 2rem;
-  margin: 20px;
+  margin: 10px 0;
 }
 
 .text-container {
@@ -350,10 +350,10 @@ footer .contacts a:hover {
 }
 
 .entry-text {
-  padding: 50px 0;
+  padding: 25px 0;
   font-size: 1.2rem;
   line-height: 1.6;
-  max-width: 80%;
+  max-width: 90%;
   text-align: justify;
 }
 
@@ -389,7 +389,6 @@ nav .close-menu{
 }
 /*Вид смартфон*/
 @media (max-width: 1024px) {
-  
   nav .close-menu{
     display: block;
     position: absolute;
