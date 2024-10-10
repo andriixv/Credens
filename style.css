@@ -351,9 +351,10 @@ footer .contacts a:hover {
 
 .entry-text {
   padding: 50px 0;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   max-width: 80%;
+  text-align: justify;
 }
 
 
@@ -469,7 +470,6 @@ nav .close-menu{
   }
 
 }
-
 
 
 /*Calendar*/
