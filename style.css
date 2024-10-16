@@ -46,6 +46,9 @@ body.dark {
   background-color: var(--body-dark);
   color: var(--eggshell);
 }
+ body.menu-open{
+  overflow: hidden;
+ }
 
 img {
   width: 100%;
@@ -64,7 +67,11 @@ ul {
 nav {
   background-color: var(--jonquil);
   padding: 20px;
-  font-size: 1.3rem;
+  font-size: 1.3em;
+}
+
+nav #logo-big{
+  width: 200px;
 }
 
 nav .container {
@@ -108,6 +115,72 @@ nav .main-menu li:hover {
 
 nav .burger-menu {
   visibility: collapse;
+}
+nav .close-menu{
+  display: none;
+}
+@media (max-width: 1150px) {
+  .link-name{
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  nav .close-menu{
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    font-size: 2rem;
+    color: var(--rich-black);
+    width: 30px;
+    height: 30px;
+  }
+  .nav {
+    z-index: 2;
+    padding: 0;
+  }
+  .link-name{
+    display:contents;
+  }
+  nav .main-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    line-height: 2;
+  }
+
+  nav .main-menu {
+    visibility: collapse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0088cc;
+    font-size: .2rem;
+    z-index: -1;
+    right: 0;
+    top: 0;
+    width: 0%;
+    height: 0%;
+  }
+
+  nav .main-menu.open {
+    z-index: 2;
+    visibility: visible;
+    position: fixed;
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+  }
+
+  nav .burger-menu{
+    visibility: visible;
+    font-size: 2rem;
+    color: var(--rich-black);
+    width: 30px;
+    height: 30px;
+  }
 }
 
 /*Стрічка анонсів подій*/
@@ -165,6 +238,7 @@ nav .burger-menu {
   max-height: 300px;
   object-fit: cover;
 }
+
 
 .more {
   text-align: center;
@@ -234,6 +308,10 @@ img.wide {
     max-height: 100%;
   }
   
+  .event img{
+    max-height: 500px ;
+  }
+
   .more.wide {
     width: 100%;
     align-self: center;
@@ -335,6 +413,10 @@ footer .contacts a:hover {
   border-radius: 5px;
 }
 
+.entry iframe{
+  width:100%; 
+  height: 500px;
+}
 .entry.dark {
   background-color: var(--prussian-blue);
 }
@@ -344,12 +426,26 @@ footer .contacts a:hover {
   margin: 10px 0;
 }
 
+.entry-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.entry-info .creator{
+  text-decoration: underline;
+  font-weight: 600;
+}
 .text-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
 .entry-text {
+  text-indent: 25px;
   padding: 25px 0;
   font-size: 1.2rem;
   line-height: 1.6;
@@ -384,70 +480,9 @@ footer .contacts a:hover {
   padding: 20px 15px;
 }
 
-nav .close-menu{
-  display: none;
-}
+
 /*Вид смартфон*/
 @media (max-width: 1024px) {
-  nav .close-menu{
-    display: block;
-    position: absolute;
-    top: 50px;
-    right: 30px;
-    font-size: 2rem;
-    color: var(--rich-black);
-    width: 30px;
-    height: 30px;
-  }
-  .nav {
-    z-index: 2;
-    padding: 0;
-  }
-
-  #logo-big {
-    width: 200px;
-  }
-
-  nav .main-menu ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    line-height: 2;
-  }
-
-  nav .main-menu {
-    visibility: collapse;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #0088cc;
-    font-size: .2rem;
-    z-index: -1;
-    right: 0;
-    top: 0;
-    width: 0%;
-    height: 0%;
-  }
-
-  nav .main-menu.open {
-    z-index: 2;
-    visibility: visible;
-    position: fixed;
-    transition: 0.5s;
-    width: 100%;
-    height: 100%;
-    font-size: 2rem;
-  }
-
-  nav .burger-menu{
-    visibility: visible;
-    font-size: 2rem;
-    color: var(--rich-black);
-    width: 30px;
-    height: 30px;
-  }
-
   .past-events .events-wraper {
     display: flex;
     flex-direction: column;
@@ -836,6 +871,12 @@ textarea {
   grid-column-gap: 20px;
   grid-row-gap: 20px; 
 }
+@media (max-width: 760px) {
+  .container.user_page{
+    display: flex;
+    flex-direction: column;
+  }
+}
 .user_card{
   background-color: var(--whitesmoke);
   border-radius: 15px;
@@ -1060,4 +1101,126 @@ justify-content: space-between;
   .socials-container a{
     width: 200px;
   }
+}
+
+/* СТИЛЬ КАРУСЕЛІ ФОТО */
+/* Position the image container (needed to position the left and right arrows) */
+.slider-container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* СТИЛІ СТОРІНКИ ШУХЛЯД */
+.drawers{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.drawer{
+  font-size: 1.2em;
+  width: 90%;
+  max-height: 700px;
+  margin: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  
+}
+@media (max-width: 760px){
+  .drawer{
+    font-size: 1em;
+  }
+}
+.drawer div{
+  width: 100%;
+  height: 100%;
+  padding: 100px;
+  display: flex;
+  background-color: rgba(167, 167, 167, 0.4);
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.drawer div:hover{
+  background-color: rgba(7, 161, 195, 0);
 }

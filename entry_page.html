@@ -29,25 +29,33 @@
     <nav>
       <div class="container">
         <div class="logo">
-          <a href="index.html"
-            ><img id="logo-big" src="img/logo-2-nobg.png" alt="logo"
+          <a href="index.html">
+            <img id="logo-big" src="img/logo-2-nobg.png" alt="logo"
           /></a>
         </div>
         <div class="main-menu" id="main-menu">
+          <span class="close-menu" id="burger-menu" onclick="burgerMenu()">
+            <i class="fas fa-close"></i>
+          </span>
           <ul>
             <li class="link">
-              <a href="index.html"><i class="fas fa-house"></i> Головна</a>
+              <a href="entries_page.html"
+                ><i class="fas fa-bookmark"></i> <span class="link-name">Шухляди</span></a>
+            </li>
+
+            <li class="link">
+              <a href="book_catalog.html"><i class="fas fa-book"></i> <span class="link-name">Книги</span></a>
             </li>
             <li class="link">
-              <a href="book_catalog.html"
-                ><i class="fas fa-book"></i> Каталог книг</a
-              >
+              <a href="entries_page.html"
+                ><i class="fas fa-newspaper"></i> <span class="link-name">Новини</span></a>
             </li>
             <li class="link">
-              <a href="entries_page.html"><i class="fas fa-bookmark"></i> Статті</a>
+              <a href="index-map.html"
+                ><i class="fas fa-newspaper"></i> <span class="link-name">Громади</span></a>
             </li>
             <li class="link">
-              <a href=""><i class="fas fa-user"></i> Вхід</a>
+              <a href="login-page.html"><i class="fas fa-user"></i> <span class="link-name">Вхід</span></a>
             </li>
             <li>
               <label class="darkmode">
@@ -57,7 +65,7 @@
             </li>
           </ul>
         </div>
-        <div class="burger-menu" id="burger-menu">
+        <div class="burger-menu" id="burger-menu" onclick="burgerMenu()">
           <i class="fa-solid fa-bars"></i>
         </div>
       </div>
@@ -92,143 +100,118 @@
       </div>
     </section>
     <section class="announcements-wraper">
-      
       <div class="announcements">
         <p>01.09 відбудеться 1 подія</p>
         <p>10.09 відбудеться 2 подія</p>
         <p>11.09 відбудеться 3 подія</p>
         <p>21.09 відбудеться 4 подія</p>
       </div>
-      
-      <button id="myBtn" onclick="modal()"  class="material-symbols-rounded btn"><span>Календар</span> calendar_month</button>
+
+      <button id="myBtn" onclick="modal()" class="material-symbols-rounded btn">
+        <span>Календар</span> calendar_month
+      </button>
     </section>
-    
+
     <section class="entry-page">
       <div class="container entry">
-        <h1 class="entry-header">Lorem ipsum dolor sit amet consectetur.</h1>
+        <h1 class="entry-header">Свято Покрови Пресвятої Богородиці</h1>
+        <div class="entry-info">
+          <span href="#" class="date">16.10.2024</span>
+          <a href="#" class="creator">Іван Франко</a>
+        </div>
         <img class="entry-image" src="img/img-1.jpg" alt="entry-image" />
         <div class="text-container">
           <p class="entry-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus adipisci rerum ut eaque vel quas ipsam quae accusamus
-            sed voluptate nobis illo, culpa tempore delectus? Dolore sed vero
-            est quis totam architecto obcaecati laboriosam tempora nam nemo
-            quaerat ipsa atque, perspiciatis enim amet ratione velit esse
-            expedita dignissimos quibusdam blanditiis. Voluptas omnis numquam
-            eius exercitationem cupiditate doloremque error doloribus distinctio
-            quae mollitia dolorem suscipit sunt veritatis at ad ipsa dicta odit,
-            assumenda saepe iure eos quod laboriosam tempora. Temporibus
-            praesentium est, voluptatibus cupiditate asperiores commodi harum
-            odio repellat saepe vitae numquam ea doloribus. Laborum neque
-            aliquam debitis, et in modi repudiandae doloribus possimus animi
-            amet sequi similique accusantium ut magnam temporibus necessitatibus
-            fugiat recusandae expedita hic dolorum numquam distinctio? Esse quia
-            sequi cupiditate veritatis aut deleniti dicta optio deserunt
-            inventore blanditiis facere neque, omnis, unde, minus iusto.
-            Distinctio ducimus fugit facere. Sed esse dolores fugit nihil
-            voluptates illum quae possimus expedita, soluta amet cumque libero
-            iste est accusantium ullam voluptas hic explicabo natus,
-            necessitatibus veniam quod perspiciatis facilis impedit quia! Unde
-            dignissimos quos animi error vel ex aut voluptatem laboriosam porro
-            quidem perferendis in repudiandae, ab voluptas deleniti officia
-            exercitationem aperiam dolorem nihil explicabo facere fugit.
-            Dignissimos quaerat eius soluta, architecto, qui dolor totam amet
-            iste, suscipit animi laboriosam magnam! Repellendus vel nulla rerum
-            incidunt et laboriosam perspiciatis rem, architecto commodi hic
-            repudiandae excepturi deserunt odit doloribus id assumenda,
-            perferendis accusantium distinctio qui ad non dolore nam.
-            Perferendis ipsam magnam hic ducimus magni adipisci dignissimos cum
-            vel rerum quasi consectetur id maxime culpa ab optio neque officia
-            veniam voluptatum blanditiis, animi deserunt sed voluptatibus.
-            Dolore, quas? Laborum accusantium architecto temporibus fuga
-            explicabo libero beatae maxime! Tenetur ipsum nihil dignissimos
-            laboriosam repudiandae quibusdam fugiat nisi sint, necessitatibus
-            enim nostrum modi, ab expedita, voluptate quas! Odit, porro,
-            assumenda eaque quam laudantium quasi nostrum quibusdam asperiores
-            animi corrupti vel voluptates corporis quidem! Enim ex, ipsum ullam,
-            nisi possimus, eos facere similique earum tempora iusto quasi nemo
-            corrupti quia sit! Eius et quibusdam nulla ut. Voluptatem deleniti
-            reprehenderit quasi, commodi accusamus cumque nam? Omnis ipsum
-            quibusdam error nulla nam, dolores distinctio eligendi esse magni
-            voluptates, recusandae dolore quasi quia expedita deleniti
-            repudiandae nobis ab placeat perspiciatis voluptatum nemo facere
-            libero doloremque! Facere velit nihil ipsum quidem explicabo quis
-            numquam totam amet voluptatibus, veniam eveniet maxime labore in
-            omnis harum, hic doloribus quasi non aliquam rem blanditiis ullam
-            neque magnam officiis? Odio, laudantium? Labore a, maiores rerum
-            impedit dolorem vel. Culpa, laudantium ducimus. Impedit labore
-            laudantium maxime exercitationem, delectus maiores omnis similique
-            sequi odit perferendis expedita tempore facilis nesciunt vel libero
-            excepturi animi, deserunt iste dolorum nemo suscipit? Nihil, numquam
-            ex? Dicta officiis, earum nihil veritatis at, doloremque illum omnis
-            nostrum sapiente numquam porro nemo? Consequatur vitae magnam odio
-            doloremque nobis officia error adipisci sequi reiciendis. Nam culpa
-            cupiditate porro animi nulla fugit, debitis placeat? Delectus
-            similique facilis ipsam laboriosam reiciendis aliquam! Quae dolore,
-            vel ullam, dolor omnis labore id rerum doloremque at ea saepe cum
-            ratione voluptatum praesentium quod voluptates iusto facere sunt
-            voluptatem, quos earum aperiam minus hic sequi. Tempore, quas,
-            obcaecati facilis fuga eum sed sequi repellendus ad doloremque
-            ducimus odio, ullam veniam asperiores odit praesentium quo porro
-            necessitatibus inventore. Officiis dolore sint, odio aspernatur in
-            deserunt. Incidunt nostrum eligendi dolore quis aspernatur omnis et
-            eum ipsa blanditiis molestiae, quos, voluptate consequuntur. Dolore
-            laudantium fuga dolores praesentium repellendus itaque ad suscipit
-            deserunt harum at saepe, quas laborum corrupti asperiores voluptates
-            in consequuntur veritatis provident repellat expedita nisi odio,
-            quis quaerat. Temporibus deserunt ex nam similique dignissimos
-            laborum, nisi ipsam minus numquam repellat voluptatum consequatur.
-            Nesciunt earum possimus quam impedit laudantium perferendis eum
-            consectetur numquam blanditiis doloremque recusandae provident vero
-            corrupti est aliquid nostrum ex id officia, debitis velit
-            voluptatum. Accusantium beatae, autem molestiae laudantium
-            necessitatibus repellendus quo quas! Voluptates ea neque inventore!
-            Cum reiciendis temporibus recusandae suscipit veritatis maiores sit
-            facilis, animi, qui, fugit pariatur dolor provident. Laborum iusto
-            ducimus molestiae minus consectetur earum assumenda vitae libero
-            delectus quos, sit culpa nam et repudiandae corrupti? Aliquid, vel
-            reiciendis? Molestiae voluptatem maxime eum velit, quos
-            perspiciatis? Natus obcaecati omnis explicabo enim laboriosam
-            quisquam fugit nemo magni veritatis! Aliquid porro reiciendis
-            voluptatem quo consequuntur beatae libero eveniet alias eaque
-            molestias. Architecto earum sunt ratione maxime quis impedit? Sequi
-            unde ducimus aspernatur consequuntur veritatis sunt nisi iusto,
-            eligendi culpa? Ea, necessitatibus ad? Itaque dolorum architecto
-            vero distinctio neque repellendus placeat aut consectetur dolore
-            dolorem odio, praesentium et officia alias corrupti? Exercitationem,
-            iusto fuga? Veniam vel dignissimos excepturi sapiente facere
-            voluptatem est illum modi eum, numquam consequatur expedita nihil
-            reiciendis vitae sunt sint debitis eaque. Quas nam quibusdam veniam.
-            Debitis nemo placeat natus omnis at ea excepturi voluptates earum
-            molestiae repellendus. Perferendis, facilis rerum. Cumque maxime,
-            molestias quasi itaque praesentium nostrum dolore voluptates,
-            maiores provident doloribus, ipsum cupiditate assumenda delectus
-            laborum eaque. Id ipsum ratione voluptate dignissimos minima ut
-            delectus ducimus hic fuga consequuntur animi, vero, cum iure
-            corporis aliquam vel quae, dolores quod dolorum quia labore quis.
-            Officiis illo rem veritatis harum! Laudantium maxime modi,
-            recusandae rerum architecto unde non aut veniam libero maiores
-            asperiores quibusdam placeat repellendus dolorum nihil ipsum
-            deleniti quis illum pariatur autem. Nostrum, itaque aliquid. Soluta
-            enim blanditiis consequuntur id officiis veniam sunt. Quia error
-            quaerat cumque, atque rerum nemo fugiat voluptas tempore rem
-            reiciendis totam harum est iure quis ipsam sapiente mollitia porro
-            nesciunt! Beatae ut reprehenderit tempora odit adipisci temporibus
-            aspernatur a quis, aliquam illo quo libero vitae. Alias ad facere
-            soluta quibusdam, nihil iste odit natus architecto consequuntur
-            aliquid! Temporibus libero accusantium, magni reiciendis totam
-            consectetur blanditiis vel, reprehenderit, culpa unde quas repellat
-            dolorum quae numquam exercitationem fuga praesentium deleniti!
-            Ipsum, voluptatem eveniet. Ipsam iure maiores reiciendis minus? Ab
-            ipsum odio neque nulla nisi amet alias, eaque quibusdam? Amet ullam
-            similique delectus, praesentium obcaecati molestias inventore soluta
-            illum neque minus explicabo. Quas a quam, tempora error repellendus
-            deleniti laudantium. Sequi aliquam ut voluptatem similique quis
-            soluta architecto quaerat voluptatibus libero. Deserunt officia
-            quibusdam, distinctio a dolores ipsa odio consequuntur, aliquam
-            accusantium provident tempora dolorum minima maxime exercitationem
-            ullam.
+            Свято Покрови Пресвятої Богородиці у місті Горохів завжди
+            відзначається з особливою урочистістю та шанобливістю, оскільки воно
+            має глибокі духовні і патріотичні корені. Покрова є не лише
+            релігійним святом, а й символом захисту українського народу, його
+            віри та боротьби за свободу. У день Покрови, 14 жовтня, горохівці
+            збираються на урочисті богослужіння у храмах міста, де проводяться
+            літургії на честь Богородиці, яка вважається покровителькою України
+            та воїнів, що захищають рідну землю. Особливу увагу приділяють
+            молитвам за мир в Україні та здоров'я українських захисників. Окрім
+            церковних заходів, у Горохові проводяться святкові заходи на
+            центральній площі міста. Міська влада разом із громадськими
+            організаціями організовує виступи народних колективів, концерти та
+            патріотичні виступи. Молодь і діти беруть участь у різних конкурсах
+            та козацьких іграх, де відтворюються елементи української історії та
+            культури. 14 жовтня також відзначається День захисників та захисниць
+            України, тож у цей день у Горохові проводяться церемонії покладання
+            квітів до пам’ятників воїнам, які загинули за незалежність України.
+            Особлива увага приділяється ветеранам війни, волонтерам і всім, хто
+            присвятив себе захисту держави. Місто вшановує своїх героїв,
+            проводячи хвилини мовчання та урочисті мітинги. Завершується
+            святкування святковою ходою, яка символізує єдність громади та віру
+            в майбутнє України під Покровом Пресвятої Богородиці. Свято в
+            Горохові стає не лише релігійним, а й важливим соціальним та
+            культурним явищем, яке об’єднує містян у вірі, пам’яті та прагненні
+            до миру.
           </p>
+        </div>
+        <div class="slider-container">
+
+          <!-- Full-width images with number text -->
+          <div class="mySlides">
+            <div class="numbertext">1 / 6</div>
+              <img src="img/slider-photos/09.png" style="width:100%">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">2 / 6</div>
+              <img src="img/slider-photos/03.png" style="width:100%">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">3 / 6</div>
+              <img src="img/slider-photos/04.png" style="width:100%">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">4 / 6</div>
+              <img src="img/slider-photos/05.png" style="width:100%">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">5 / 6</div>
+              <img src="img/slider-photos/06.png" style="width:100%">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">6 / 6</div>
+              <img src="img/slider-photos/07.png" style="width:100%">
+          </div>
+        
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+          <!-- Image text -->
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+        
+          <!-- Thumbnail images -->
+          <div class="row">
+            <div class="column">
+              <img class="demo cursor" src="img/slider-photos/09.png" style="width:100%" onclick="currentSlide(1)" alt="Фото 1">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="img/slider-photos/03.png" style="width:100%" onclick="currentSlide(2)" alt="Фото 2">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="img/slider-photos/04.png" style="width:100%" onclick="currentSlide(3)" alt="Фото 3">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="img/slider-photos/05.png" style="width:100%" onclick="currentSlide(4)" alt="Фото 4">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="img/slider-photos/06.png" style="width:100%" onclick="currentSlide(5)" alt="Фото 5">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="img/slider-photos/07.png" style="width:100%" onclick="currentSlide(6)" alt="Фото 6">
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -241,13 +224,11 @@
             <ul>
               <li>
                 <a href="mailto:"
-                  ><i class="fas fa-envelope"></i> email@email.com</a
-                >
+                  ><i class="fas fa-envelope"></i> email@email.com</a>
               </li>
               <li>
-                <a href="tel:+380123456789"
-                  ><i class="fas fa-phone"></i> +380123456789</a
-                >
+                <a href="tel:+380123456789">
+                  <i class="fas fa-phone"></i> +380123456789</a>
               </li>
             </ul>
           </div>
