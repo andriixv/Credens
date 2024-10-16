@@ -473,6 +473,9 @@ footer .contacts a:hover {
   border-radius: 5px;
   border: none;
 }
+.btn:hover{
+  background: var(--silver-lake-blue);
+}
 
 .container {
   max-width: 1100px;
@@ -810,7 +813,7 @@ textarea {
   }
 }
 
-/*Сторінка каталогу книг*/
+/*СТОРІНКА КАТАЛОГУ КНИГ*/
 
 .book-catalog .container{
   display: flex;
@@ -860,9 +863,21 @@ textarea {
 /* СТОРІНКА ОКРЕМОЇ КНИГИ */
 .book-details{
   display: flex;
-  flex-direction: row;
+  flex-direction: row; 
 }
-
+.book-details .book{
+  max-width: 80vw;
+}
+.book-info p{
+  margin-top: 5px;
+}
+.book-info .btn{
+  text-align: center;
+  margin-top: 10px;
+}
+.book-info div{
+  text-indent: 25px;
+}
 /* СТОРІНКА КОРИСТУВАЧА */
 .container.user_page{
   display: grid;
