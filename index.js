@@ -177,9 +177,9 @@ function modal() {
     }
   };
 }
-
+if (document.getElementById("view-selector")){
 //Вид записів
-function changeView() {
+
   const viewBtn = document.getElementById("view-selector");
   const viewIcon = document.getElementById("viewIcon");
 
@@ -187,7 +187,7 @@ function changeView() {
     ".events-wraper, .event, .event-image, .event-header, .description, .more"
   );
 
-  const currentView = localStorage.getItem("view") === "grid";
+  const currentView = localStorage.getItem("view") === "grid";//Стандартний вид матеріалів
 
   if (currentView) {
     items.forEach((item) => {
@@ -195,6 +195,7 @@ function changeView() {
     });
     viewBtn.checked = true;
   }
+
   viewBtn.addEventListener("click", () => {
     if (viewBtn.checked) {
       items.forEach((item) => {
