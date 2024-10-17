@@ -456,7 +456,7 @@ footer .contacts a:hover {
 
 /*Загальні*/
 .card {
-  max-width: 300px;
+  /* max-width: 300px; */
   border-radius: 5px;
   padding: 10px;
   background-color: var(--whitesmoke);
