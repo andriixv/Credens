@@ -106,6 +106,10 @@
     <div class="add-filters container">
       <span onclick="showFilters()" class="material-symbols-rounded filter-button"> filter_alt</span>
       <a href="add_book.html" class="filter-button"><span class="material-symbols-rounded">add </span>Книга</a>
+      <label class="book-view btn">
+        <input type="checkbox" onchange="booksGrid()"/>
+        <i id="viewIcon" class="fa-regular fa-eye"></i>
+      </label>
       <div class="selected-categories-container">
         <!-- <h2>Selected Categories</h2> -->
         <div class="selected-categories"></div>
@@ -186,13 +190,13 @@
       <div class="book card">
         <img class="cover" src='img/gibson_nejromant.webp'></img>
         <div class="book-info">
-          <div class="title"><h1>Нейромант</h1></div>
-          <div class="author">Вільям Гібсон</div>
-          <div class="year">2022</div>
-          <div class="genre">Наукова фантастика</div>
-          <div class="language">Українська</div>
-          <div class="publisher">Видавництво "Видавництво"</div>
-          <div class="isbn">978-617-664-240-4</div>
+          <p class="title"><h1>Нейромант</h1></p>
+          <p class="author">Вільям Гібсон</p>
+          <p class="year">2022</p>
+          <p class="genre">Наукова фантастика</p>
+          <p class="language">Українська</p>
+          <p class="publisher">Видавництво "Видавництво"</p>
+          <p class="isbn">978-617-664-240-4</p>
           <a class="btn more" href="book-page.html">Детальніше</a>
         </div>
 
@@ -200,13 +204,13 @@
       <div class="book card">
         <img class="cover" src='img/silmarilion.webp'></img>
         <div class="book-info">
-          <div class="title"><h1>Сильмариліон</h1></div>
-          <div class="author">Джон Рональд Руел Толкін</div>
-          <div class="year">2021</div>
-          <div class="genre">Фентезі</div>
-          <div class="language">Українська</div>
-          <div class="publisher">Астролябія</div>
-          <div class="isbn">978-617-664-240-4</div>
+          <p class="title"><h1>Сильмариліон</h1></p>
+          <p class="author">Джон Рональд Руел Толкін</p>
+          <p class="year">2021</p>
+          <p class="genre">Фентезі</p>
+          <p class="language">Українська</p>
+          <p class="publisher">Астролябія</p>
+          <p class="isbn">978-617-664-240-4</p>
           <a class="btn more" href="">Детальніше</a>
         </div>
       </div>

@@ -327,3 +327,13 @@ function showBook() {
       console.log(oblast)
       document.getElementById('oblastMap').style.backgroundImage = oblast
    }
+
+   function booksGrid(){
+    console.log('yes1')
+    let things = document.querySelectorAll('.book, .book-catalog .container');
+    
+    things.forEach((thing) => {
+      console.log('yes');
+      thing.classList.toggle('grid');
+    })
+  }
