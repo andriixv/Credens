@@ -870,6 +870,7 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-left: 10px;
 }
 .book-info .btn{
   max-width: 200px;
@@ -890,7 +891,8 @@ textarea {
     
   }
   .book-info{
-    /* max-width: 90%; */
+    margin-left: 0px;
+    width: 90%;
     font-size: 1rem;
     /* overflow: hidden; */
   }
@@ -901,8 +903,12 @@ textarea {
   display: flex;
   flex-direction: row; 
 }
-.book-details .book{
-  max-width: 80vw;
+.book-details .container{
+  max-width: 90%;
+}
+.book-details .card.book{
+  /* width: 100%; */
+  margin: auto;
 }
 .book-info p{
   margin-top: 5px;
@@ -914,6 +920,13 @@ textarea {
 .book-info div{
   text-indent: 25px;
 }
+
+@media (max-width: 760px) {
+  .book-details .container{
+    max-width: 100%;
+  }
+}
+
 /* СТОРІНКА КОРИСТУВАЧА */
 .container.user_page{
   display: grid;
